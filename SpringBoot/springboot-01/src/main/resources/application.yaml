@@ -1,0 +1,50 @@
+spring:
+  mvc:
+    static-path-pattern: /imgs/**
+  web:
+    resources:
+      add-mappings: true
+
+
+
+  # mysql
+  datasource:
+    druid:
+      stat-view-servlet:
+        enabled: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: qazOKM123
+    url: jdbc:mysql://127.0.0.1:3306/test
+
+  # redis
+  redis:
+#    host: 127.0.0.1
+#    port: 6379
+    cluster:
+      nodes:
+        [
+          47.96.174.23:6371,
+          47.96.174.23:6372,
+        ]
+    timeout: 60000
+#    database: 15
+#    password: 123456
+#    jedis:
+#      pool:
+#        max-active: 10
+
+
+
+
+
+# mybatis
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+#  config-location: classpath:mybatis/mybatis-config.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+jwt:
+  secret: "123"
+

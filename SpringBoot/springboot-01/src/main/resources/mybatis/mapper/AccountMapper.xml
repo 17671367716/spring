@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.AccountMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.springboot.bean.Account">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="companyTitle" column="company_title" jdbcType="VARCHAR"/>
+            <result property="legalUser" column="legal_user" jdbcType="VARCHAR"/>
+            <result property="accountUser" column="account_user" jdbcType="VARCHAR"/>
+            <result property="iphone" column="iphone" jdbcType="VARCHAR"/>
+            <result property="companySite" column="company_site" jdbcType="VARCHAR"/>
+            <result property="accountType" column="account_type" jdbcType="VARCHAR"/>
+            <result property="accountSite" column="account_site" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,company_title,legal_user,
+        account_user,iphone,company_site,
+        account_type,account_site
+    </sql>
+</mapper>
